@@ -17,9 +17,6 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         path: ${{ env.DEVOPS_DIR }}
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
     - name: Hello World
-      run: python unittest_ilman.py
+      run: python ${{ env.DEVOPS_DIR }}/hello_world.py
       shell: sh
